@@ -22,7 +22,7 @@
 
         <div class="ingredient-group" id="wraps">
             <h3>Designate your wrap:</h3>
-            <!--/*@thymesVar id="wrap" type="com.home.tacocloud.domain.Ingredient.Type"*/-->
+            <!--/*@thymesVar id="wrap" type="com.home.tacocloud.domain.Ingredient"*/-->
             <div th:each="ingredient : ${wrap}">
                 <label>
                     <input th:field="*{ingredients}" type="checkbox"
@@ -34,7 +34,7 @@
 
         <div class="ingredient-group" id="proteins">
             <h3>Pick your protein:</h3>
-            <!--/*@thymesVar id="protein" type="com.home.tacocloud.domain.Ingredient.Type"*/-->
+            <!--/*@thymesVar id="protein" type="com.home.tacocloud.domain.Ingredient"*/-->
             <div th:each="ingredient : ${protein}">
                 <label>
                     <input th:field="*{ingredients}" type="checkbox"
@@ -46,7 +46,7 @@
 
         <div class="ingredient-group" id="cheeses">
             <h3>Choose your cheese:</h3>
-            <!--/*@thymesVar id="cheese" type="com.home.tacocloud.domain.Ingredient.Type"*/-->
+            <!--/*@thymesVar id="cheese" type="com.home.tacocloud.domain.Ingredient"*/-->
             <div th:each="ingredient : ${cheese}">
                 <label>
                     <input th:field="*{ingredients}" type="checkbox"
@@ -58,7 +58,7 @@
 
         <div class="ingredient-group" id="veggies">
             <h3>Determine your veggies:</h3>
-            <!--/*@thymesVar id="veggies" type="com.home.tacocloud.domain.Ingredient.Type"*/-->
+            <!--/*@thymesVar id="veggies" type="com.home.tacocloud.domain.Ingredient"*/-->
             <div th:each="ingredient : ${veggies}">
                 <label>
                     <input th:field="*{ingredients}" type="checkbox"
@@ -70,7 +70,7 @@
 
         <div class="ingredient-group" id="sauces">
             <h3>Select your sauce:</h3>
-            <!--/*@thymesVar id="sauce" type="com.home.tacocloud.domain.Ingredient.Type"*/-->
+            <!--/*@thymesVar id="sauce" type="com.home.tacocloud.domain.Ingredient"*/-->
             <div th:each="ingredient : ${sauce}">
                 <label>
                     <input th:field="*{ingredients}" type="checkbox"
