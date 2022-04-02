@@ -13,7 +13,6 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED, force = true)
 public class Ingredient {
 
     @Id
