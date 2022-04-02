@@ -131,8 +131,6 @@ public class DesignAndOrderBrowserTest {
         fillField("input#deliveryName", "Ima Hungry");
         fillField("input#deliveryStreet", "1234 Culinary Blvd.");
         fillField("input#deliveryCity", "Foodsville");
-        fillField("input#deliveryState", "CO");
-        fillField("input#deliveryZip", "81019");
         fillField("input#ccNumber", "4111111111111111");
         fillField("input#ccExpiration", "10/23");
         fillField("input#ccCVV", "123");
@@ -146,14 +144,12 @@ public class DesignAndOrderBrowserTest {
         assertThat(browser.getCurrentUrl()).isEqualTo(orderDetailsPageUrl());
 
         List<String> validationErrors = getValidationErrorTexts();
-        assertThat(validationErrors.size()).isEqualTo(9);
+        assertThat(validationErrors.size()).isEqualTo(7);
         assertThat(validationErrors).containsExactlyInAnyOrder(
                 "Please correct the problems below and resubmit.",
                 "Delivery name is required",
                 "Street is required",
                 "City is required",
-                "State is required",
-                "Zip code is required",
                 "Not a valid credit card number",
                 "Must be formatted MM/YY",
                 "Invalid CVV"
@@ -173,8 +169,6 @@ public class DesignAndOrderBrowserTest {
         fillField("input#deliveryName", "I");
         fillField("input#deliveryStreet", "1");
         fillField("input#deliveryCity", "F");
-        fillField("input#deliveryState", "C");
-        fillField("input#deliveryZip", "8");
         fillField("input#ccNumber", "1234432112344322");
         fillField("input#ccExpiration", "14/91");
         fillField("input#ccCVV", "1234");
