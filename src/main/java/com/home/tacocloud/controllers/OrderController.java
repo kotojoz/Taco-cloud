@@ -26,7 +26,7 @@ public class OrderController {
     }
 
 
-    @GetMapping("current")
+    @GetMapping("/current")
     public String orderForm() {
         return "orderForm";
     }
