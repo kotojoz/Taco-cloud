@@ -39,6 +39,7 @@ public class SecurityConfig {
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .defaultSuccessUrl("/design", true)
 
                 .and()
                 .build();
