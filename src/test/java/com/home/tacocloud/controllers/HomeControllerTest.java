@@ -1,5 +1,6 @@
 package com.home.tacocloud.controllers;
 
+import com.home.tacocloud.configurations.OrderProps;
 import com.home.tacocloud.repositories.IngredientRepository;
 import com.home.tacocloud.repositories.OrderRepository;
 import com.home.tacocloud.repositories.TacoRepository;
@@ -38,6 +39,9 @@ class HomeControllerTest {
 
     @MockBean
     private PasswordEncoder passwordEncoder;
+
+    @MockBean
+    private OrderProps orderProps;
 
     @Test
     public void testHomePage() throws Exception{
