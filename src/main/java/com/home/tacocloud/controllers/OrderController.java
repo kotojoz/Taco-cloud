@@ -4,6 +4,8 @@ import com.home.tacocloud.domain.TacoOrder;
 import com.home.tacocloud.domain.User;
 import com.home.tacocloud.repositories.OrderRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -55,7 +57,8 @@ public class OrderController {
 
     @GetMapping
     public String ordersForUser(@AuthenticationPrincipal User user, Model model){
-        model.addAttribute("orders", orderRepository.findByUserOrderByPlacedAtDesc(user));
+        Pageable pageable = PageRequest.of(0,20);
+        model.addAttribute("orders", orderRepository.findByUserOrderByPlacedAtDesc(user,pageable));
         return "orderList";
     }
 }
